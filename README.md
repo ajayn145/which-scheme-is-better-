@@ -60,6 +60,15 @@ This will tell us which scheme is better? - whether FDM (forward differencing Me
 
 
 %%
+%Code in MATLAB
+![image](https://user-images.githubusercontent.com/77200332/134783194-9782db23-e1aa-47da-9289-2225ec1377e9.png)
+![image](https://user-images.githubusercontent.com/77200332/134783204-5fb80a4b-e6ab-459c-8c55-8e7f15a27f98.png)
+![image](https://user-images.githubusercontent.com/77200332/134783211-f21950eb-ac10-43e3-b488-dacb9bffc40b.png)
+
+
+
+
+%%
 % output Files
 ![image](https://user-images.githubusercontent.com/77200332/134773958-b00c3bd9-9b4b-40d9-aed3-db4f5b1dadb4.png)
 ![image](https://user-images.githubusercontent.com/77200332/134773994-7c658509-9edf-42bc-99c7-1c591e8721ec.png)
