@@ -8,7 +8,8 @@ This will tell us which scheme is better? - whether FDM (forward differencing Me
     clear all
     clc
 
-%%defining the polynomial
+%%
+%defining the polynomial
     polynomial=[3 5 7]
 
 %%
