@@ -1,0 +1,60 @@
+# which-scheme-is-better-
+This will tell us which scheme is better? - whether FDM (forward differencing Method), BDM (backward Differencing Method), or CDM (central differencing scheme).)
+
+%%
+%Finding First derivatives of a polynomial using FINITE DIFFERENCE METHOD
+
+    close all
+    clear all
+    clc
+
+%%
+%defining the polynomial
+    polynomial=[3 5 7]
+
+%%
+%finding derivative of a polynomial
+    polynomial_derivative=polyder(polynomial)
+
+%%
+%finding value of a polynmial and its deriative at x = 0
+    polynomial_value_with_x_as_0 = polyval(polynomial,0)
+    polynomial_derivative_value_with_x_as_0 = polyval(polynomial_derivative,0)
+
+%%
+    x_0=0;
+    h=linspace(0,1,50);
+
+%%
+    for i=1:length(h)
+
+
+        %Finite Difference Method- Forward Difference Method (FDM)
+        polynomial_first_derivative_using_FDM(i) =  polyval(polynomial,(x_0+h(i)))/(h(i))- polyval(polynomial,x_0)/(h(i));
+
+
+        %Finite Difference Method- Backward Difference Method (BDM)
+        polynomial_first_derivative_using_BDM(i) = polyval(polynomial,x_0)/(h(i)) - polyval(polynomial,(x_0-h(i)))/(h(i));
+
+
+        %Finite Differece Method - Central Difference Method (CDM)
+        polynomial_first_derivative_using_CDM(i) = polyval(polynomial,(x_0+h(i)))/(2*h(i)) - polyval(polynomial,(x_0-h(i)))/(2*h(i));
+
+        figure(1)
+        plot(polynomial_first_derivative_using_FDM,'k-o')
+        hold on
+        plot(polynomial_first_derivative_using_BDM,'k-d')
+        plot(polynomial_first_derivative_using_CDM,'k-*')
+        axis([1 51 0 10])
+        text = 'Dependency of FDM, BDM,CDM on varying grid size- The graph shows the CDM is';
+        text = [text newline 'better than FDM or BDM, as the error formation is less in CDM OR THIS POLYNOMIAL'];
+        title(text)
+        xlabel("gride space / mesh size / cell size")
+        ylabel("first derivative of a ploynomial")
+        legend("first derivative using FDM","first derivative using BDM","first derivative using CDM")
+    end
+
+%%
+    display(polynomial_first_derivative_using_FDM)
+    display(polynomial_first_derivative_using_BDM)
+    display(polynomial_first_derivative_using_CDM)
